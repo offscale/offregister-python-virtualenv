@@ -3,9 +3,9 @@ from sys import version
 
 if version[0] == "2":
     from itertools import imap as map, ifilter as filter
+
 from os import path, listdir
 from functools import partial
-from itertools import imap, ifilter
 from ast import parse
 from distutils.sysconfig import get_python_lib
 
