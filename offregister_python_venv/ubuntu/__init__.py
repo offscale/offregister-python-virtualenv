@@ -85,9 +85,13 @@ def run_inside1(package_directory=None, venv=None, requirements=True, *args, **k
         requirements = "requirements.txt" if requirements is True else requirements
         if requirements:
             if isinstance(requirements, list):
-                deque(map(
-                    lambda req: run_cmd('pip install -r "{}"'.format(req)), requirements
-                ), maxlen=0)
+                deque(
+                    map(
+                        lambda req: run_cmd('pip install -r "{}"'.format(req)),
+                        requirements,
+                    ),
+                    maxlen=0,
+                )
             else:
                 run_cmd('pip install -r "{}"'.format(requirements))
 
