@@ -9,13 +9,14 @@ from functools import partial
 from ast import parse
 from distutils.sysconfig import get_python_lib
 
+
 if __name__ == "__main__":
     package_name = "offregister_python_venv"
 
     with open(path.join(package_name, "__init__.py")) as f:
-        __author__, __version__ = imap(
-            lambda buf: next(imap(lambda e: e.value.s, parse(buf).body)),
-            ifilter(
+        __author__, __version__ = map(
+            lambda buf: next(map(lambda e: e.value.s, parse(buf).body)),
+            filter(
                 lambda line: line.startswith("__version__")
                 or line.startswith("__author__"),
                 f,
@@ -42,7 +43,7 @@ if __name__ == "__main__":
             "License :: OSI Approved :: Apache Software License",
             "Programming Language :: Python",
             "Programming Language :: Python :: 2.7",
-            "Programming Language :: Python :: 2 :: Only",
+            "Programming Language :: Python :: 3",
         ],
         install_requires=["pyyaml", "fab-classic", "paramiko"],
         test_suite=package_name + ".tests",
