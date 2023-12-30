@@ -7,9 +7,9 @@ if version[0] == "2":
     from itertools import imap as map
 
 from fabric.api import run
-from fabric.context_managers import shell_env, cd
+from fabric.context_managers import cd, shell_env
 from fabric.contrib.files import exists
-from fabric.operations import sudo, _run_command
+from fabric.operations import _run_command, sudo
 from offregister_fab_utils.apt import apt_depends
 from offregister_fab_utils.python import pip_depends
 from six import string_types
