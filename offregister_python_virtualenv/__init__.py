@@ -8,6 +8,7 @@ import yaml
 
 __author__ = "Samuel Marks"
 __version__ = "0.0.2"
+__description__ = "This package follows the offregister specification to handle python virtual environments (venvs), including inline to offregister execution within the venv."
 
 
 def get_logger(name=None):
