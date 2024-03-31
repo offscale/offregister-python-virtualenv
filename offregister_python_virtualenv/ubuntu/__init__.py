@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from collections import deque
 from functools import partial
 from itertools import imap
